@@ -6,9 +6,13 @@ p {
 }
 
 div {
-  @include flexContainer(flex-start, flex-end, column);
+  @include flexContainer(flex-start, flex-end, $ac: center);
+}
 
+body {
+  width: 100%;
+  height: 100vh;
+  @include flexContainer(flex-start, $col-mobile: false);
   @include mobile {
-    @include flexContainerInvert($fd: column, $invert: true)
   }
 }
