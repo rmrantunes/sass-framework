@@ -7,15 +7,9 @@ My Sass Framework. Feel free to collaborate.
 - Flex Alfa version:
 - - flexContainer(
 
-    - \$jc: null,
-    - \$ai: null,
-    - \$fd: null,
-    - \$wr: null,
-    - \$ac: null,
-    - \$col-mobile: true )
-
-    - justify-content: \$jc;
-    - align-items: \$ai;
-    - flex-wrap: \$wr;
-    - flex-direction: \$fd;
-    - align-content: \$ac;
+    - \$jc (justify-content): null,
+    - \$ai (align-items): null,
+    - \$fd (flex-direction): null,
+    - \$wr (flex-wrap): null,
+    - \$ac (align-content): null,
+    - \$col-mobile (Activate column on mobile): true )
