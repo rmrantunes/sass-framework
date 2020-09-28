@@ -24,16 +24,16 @@ There is a HTML file just for tests.
 
 - Grid Layout Alfa version:
 - @mixin gridContainer(
-  \$gtc (grid-template-columns): null,
-  \$gtr (grid-template-rows): null,
-  \$gta (grid-template-areas): null,
-  \$gap (gap): null,
-  \$gac (grid-auto-columns): null,
-  \$gar (grid-auto-rows): null,
-  \$gaf (grid-auto-flow): null,
-  \$jc (justify-content): null,
-  \$ac (align-content): null,
-  \$ji (justify-items): null,
-  \$ai (align-items): null,
-  \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
-  )
+  - \$gtc (grid-template-columns): null,
+  - \$gtr (grid-template-rows): null,
+  - \$gta (grid-template-areas): null,
+  - \$gap (gap): null,
+  - \$gac (grid-auto-columns): null,
+  - \$gar (grid-auto-rows): null,
+  - \$gaf (grid-auto-flow): null,
+  - \$jc (justify-content): null,
+  - \$ac (align-content): null,
+  - \$ji (justify-items): null,
+  - \$ai (align-items): null,
+  - \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
+    )
