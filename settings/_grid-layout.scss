@@ -9,7 +9,8 @@
   $jc: null,
   $ac: null,
   $ji: null,
-  $ai: null
+  $ai: null,
+  $col: null
 ) {
   display: grid;
   grid-template-columns: $gtc;
@@ -23,6 +24,8 @@
   align-content: $ac;
   justify-items: $ji;
   align-items: $ai;
+
+  @include gridToColumn($col);
 }
 
 @mixin gridItem($gc: null, $gr: null, $ga: null, $js: null, $as: null) {
