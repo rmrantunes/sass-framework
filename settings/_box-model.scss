@@ -29,16 +29,16 @@
 // MARGIN
 //
 
-@mixin listMargin($ml: null, $mt: null, $invert: null) {
+@mixin listMargin($ml: null, $mt: null, $invert: null, $col: null) {
   & + & {
     margin-left: $ml;
     margin-top: $mt;
 
     @if $invert != null {
       // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
-      @include sm {
+      @include responsive($col) {
         margin-top: $ml * $invert;
-        margin-left: null;
+        margin-left: 0;
       }
     }
   }
