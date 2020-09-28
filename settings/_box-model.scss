@@ -1,11 +1,7 @@
-// It doesn't make sense build mixins for box-model.
-// if you don't think so, tell me. It realy whorth it?
-//
-
 //
 // PADDING
 //
-@mixin paddingX($pd, $pl, $pr) {
+@mixin paddingX($pd: null, $pl: null, $pr: null) {
   padding-left: $pd;
   padding-right: $pd;
 
@@ -40,7 +36,7 @@
 
     @if $invert != null {
       // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
-      @include small {
+      @include sm {
         margin-top: $ml * $invert;
         margin-left: null;
       }
