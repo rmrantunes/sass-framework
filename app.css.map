@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,CAAC,CAAC;ECyBA,IAAI,EDxBc,CAAC,CAAC,CAAC,CAAC,KAAK;ECyB3B,KAAK,EAFwB,CAAC;EAG9B,UAAU,EAH2B,OAAO;CDtB7C;;AAED,AAAA,GAAG,CAAC;ECYF,OAAO,EAAE,IAAI;EACb,eAAe,EDZoB,QAAQ;ECa3C,WAAW,EDbwB,QAAQ;ECc3C,SAAS,EAlBJ,IAAI;EAmBT,cAAc,EDf+B,MAAM;ECgBnD,aAAa,EAnBR,OAAO;CDQb;;AEZC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EFM1C,AAAA,GAAG,CAAC;ICYF,OAAO,EAAE,IAAI;IACb,eAAe,EAlBV,MAAM;IAmBX,WAAW,EApBN,MAAM;IAqBX,SAAS,EAlBJ,IAAI;IAmBT,cAAc,EDZgB,MAAM;ICapC,aAAa,EAnBR,OAAO;GDQb",
+    "sources": [
+        "app.scss",
+        "settings/_flex.scss",
+        "settings/_breakpoints.scss"
+    ],
+    "names": [],
+    "file": "app.css"
+}

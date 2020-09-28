@@ -1,0 +1,14 @@
+@import "settings/flex";
+@import "settings/breakpoints";
+
+p {
+  @include flexItem(1 1 350px);
+}
+
+div {
+  @include flexContainer(flex-start, flex-end, column);
+
+  @include mobile {
+    @include flexContainerInvert($fd: column, $invert: true)
+  }
+}

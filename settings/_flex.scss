@@ -1,0 +1,33 @@
+@mixin flexContainer(
+  $jc: center,
+  $ai: center,
+  $fd: row,
+  $wr: wrap,
+  $ac: stretch,
+  $invert: false,
+  $reset: true
+) {
+  // @if $invert == true and $fd == column {
+  //   $placeholder: $jc;
+  //   $jc: $ai;
+  //   $ai: $placeholder;
+  // }
+  // @else if $reset == true {
+  //   $jc: null,
+  //   $ai: null,
+  //   $wr: null,
+  // }
+
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $wr;
+  flex-direction: $fd;
+  align-content: $ac;
+}
+
+@mixin flexItem($flex: 1, $or: 0, $as: stretch) {
+  flex: $flex;
+  order: $or;
+  align-self: $as;
+}
