@@ -7,7 +7,7 @@ There is a HTML file just for tests.
 # Changelog
 
 - Flex Alfa version:
-- flexContainer(
+- @mixin flexContainer(
 
   - \$jc (justify-content): null,
   - \$ai (align-items): null,
@@ -16,14 +16,18 @@ There is a HTML file just for tests.
   - \$ac (align-content): null,
   - \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
 
-- flexItem(
+- @mixin flexItem(
 
   - \$fl (flex): 1,
   - \$or (order): null,
   - \$as (align-self): null)
 
+\
+\
+
 - Grid Layout Alfa version:
 - @mixin gridContainer(
+
   - \$gtc (grid-template-columns): null,
   - \$gtr (grid-template-rows): null,
   - \$gta (grid-template-areas): null,
@@ -36,4 +40,12 @@ There is a HTML file just for tests.
   - \$ji (justify-items): null,
   - \$ai (align-items): null,
   - \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
+    )
+
+- @mixin gridItem(
+  - \$gc (grid-column): null,
+  - \$gr (grid-row): null,
+  - \$ga (grid-area): null,
+  - \$js (justify-self): null,
+  - \$as (align-self): null)
     )
