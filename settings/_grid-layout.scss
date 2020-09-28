@@ -25,7 +25,9 @@
   justify-items: $ji;
   align-items: $ai;
 
-  @include gridToColumn($col);
+  @include responsive($col) {
+    grid-template-columns: 1fr;
+  };
 }
 
 @mixin gridItem($gc: null, $gr: null, $ga: null, $js: null, $as: null) {
