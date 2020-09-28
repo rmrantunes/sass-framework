@@ -1,31 +1,79 @@
 // As same as Bootstrap's
 // It needs a review
-@mixin extraSmall {
+@mixin xs {
   @media only screen and (max-width: 575px) {
     @content;
   }
 }
 
-@mixin small {
+@mixin sm {
   @media only screen and (max-width: 576px) {
     @content;
   }
 }
 
-@mixin medium {
+@mixin md {
   @media only screen and (max-width: 768px) {
     @content;
   }
 }
 
-@mixin large {
+@mixin lg {
   @media only screen and (max-width: 992px) {
     @content;
   }
 }
 
-@mixin extraLarge {
+@mixin xl {
   @media only screen and (max-width: 1200px) {
     @content;
+  }
+}
+
+@mixin flexToColumn($col) {
+  @if $col == xs {
+    @include xs {
+      flex-direction: column;
+    }
+  } @else if $col == sm {
+    @include sm {
+      flex-direction: column;
+    }
+  } @else if $col == md {
+    @include md {
+      flex-direction: column;
+    }
+  } @else if $col == lg {
+    @include lg {
+      flex-direction: column;
+    }
+  } @else if $col == xl {
+    @include xl {
+      flex-direction: column;
+    }
+  }
+}
+
+@mixin gridToColumn($col) {
+  @if $col == xs {
+    @include xs {
+      grid-template-columns: 1fr;
+    }
+  } @else if $col == sm {
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  } @else if $col == md {
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  } @else if $col == lg {
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+  } @else if $col == xl {
+    @include xl {
+      grid-template-columns: 1fr;
+    }
   }
 }
