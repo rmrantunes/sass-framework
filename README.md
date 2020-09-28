@@ -13,3 +13,8 @@ My Sass Framework. Feel free to collaborate.
   - \$fw (flex-wrap): null,
   - \$ac (align-content): null,
   - \$col-mobile (Activate column on mobile): true )
+
+- flexItem(
+  - \$flex (flex): 1,
+  - \$or (order): null,
+  - \$as (align-self): null)
