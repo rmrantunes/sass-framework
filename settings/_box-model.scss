@@ -1,3 +1,6 @@
+// It doesn't make sense build mixins for box-model.
+// if you don't think so, tell me. It realy whorth it?
+
 @mixin padding($values) {
   padding: $values;
 }

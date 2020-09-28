@@ -1,6 +1,8 @@
 # sass-framework
 
 My Sass Framework. Feel free to collaborate.
+It consists in mixins to make our workflow easier and faster.
+There is a HTML file just for tests.
 
 # Changelog
 

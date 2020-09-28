@@ -1,7 +1,10 @@
 p {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 350px;
-          flex: 1 1 350px;
+      -ms-flex: 1 1 35px;
+          flex: 1 1 35px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 div {
@@ -14,8 +17,8 @@ div {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 536px) {

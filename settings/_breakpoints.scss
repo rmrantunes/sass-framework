@@ -1,5 +1,31 @@
-@mixin mobile {
-  @media only screen and (max-width: 536px) {
+// As same as Bootstrap's
+@mixin extraSmall {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+
+@mixin small {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin extraLarge {
+  @media only screen and (max-width: 1200px) {
     @content;
   }
 }
