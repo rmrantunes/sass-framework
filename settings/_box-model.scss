@@ -1,6 +1,49 @@
 // It doesn't make sense build mixins for box-model.
 // if you don't think so, tell me. It realy whorth it?
+//
 
-@mixin padding($values) {
-  padding: $values;
+//
+// PADDING
+//
+@mixin paddingX($pd, $pl, $pr) {
+  padding-left: $pd;
+  padding-right: $pd;
+
+  @if $pl != null {
+    padding-left: $pl;
+  }
+  @if $pr != null {
+    padding-right: $pr;
+  }
+}
+
+@mixin paddingY($pd: null, $pt: null, $pb: null) {
+  padding-top: $pd;
+  padding-bottom: $pd;
+
+  @if $pt != null {
+    padding-top: $pt;
+  }
+  @if $pb != null {
+    padding-bottom: $pb;
+  }
+}
+
+//
+// MARGIN
+//
+
+@mixin listMargin($ml: null, $mt: null, $invert: null) {
+  & + & {
+    margin-left: $ml;
+    margin-top: $mt;
+
+    @if $invert != null {
+      // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
+      @include small {
+        margin-top: $ml * $invert;
+        margin-left: null;
+      }
+    }
+  }
 }
