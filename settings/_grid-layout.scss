@@ -1,0 +1,34 @@
+@mixin gridContainer(
+  $gtc: null,
+  $gtr: null,
+  $gta: null,
+  $gap: null,
+  $gac: null,
+  $gar: null,
+  $gaf: null,
+  $jc: null,
+  $ac: null,
+  $ji: null,
+  $ai: null
+) {
+  display: grid;
+  grid-template-columns: $gtc;
+  grid-template-rows: $gtr;
+  grid-template-areas: $gta;
+  gap: $gap;
+  grid-auto-columns: $gac;
+  grid-auto-rows: $gar;
+  grid-auto-flow: $gaf;
+  justify-content: $jc;
+  align-content: $ac;
+  justify-items: $ji;
+  align-items: $ai;
+}
+
+@mixin gridItem($gc: null, $gr: null, $ga: null, $js: null, $as: null) {
+  grid-columns: $gc;
+  grid-rows: $gr;
+  grid-areas: $ga;
+  justify-self: $js;
+  align-self: $as;
+}
