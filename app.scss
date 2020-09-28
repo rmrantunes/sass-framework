@@ -1,16 +1,19 @@
-@import "settings/flex";
 @import "settings/breakpoints";
+@import "settings/flex";
+@import "settings/grid-layout";
+@import "settings/box-model";
 
 p {
   @include flexItem(1 1 35px, $or: -1);
 }
 
 div {
-  @include flexContainer(flex-start, flex-end, $fw: wrap);
+  @include flexContainer(flex-start, flex-end, $fw: wrap, $col: xs);
+  @include listMargin(13rem, null, 2, sm);
 }
 
 body {
   width: 100%;
   height: 100vh;
-  @include flexContainer(flex-start, center, $col: md);
+  @include gridContainer($gtc: repeat(2, 1fr), $gap: 3rem, $ac: center, $col: xl);
 }
