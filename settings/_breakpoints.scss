@@ -1,10 +1,10 @@
 // As same as Bootstrap's
+// It needs a review
 @mixin extraSmall {
   @media only screen and (max-width: 575px) {
     @content;
   }
 }
-
 
 @mixin small {
   @media only screen and (max-width: 576px) {
