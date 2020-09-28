@@ -30,50 +30,26 @@
   }
 }
 
-@mixin flexToColumn($col) {
+@mixin responsive($col) {
   @if $col == xs {
     @include xs {
-      flex-direction: column;
+      @content;
     }
   } @else if $col == sm {
     @include sm {
-      flex-direction: column;
+      @content;
     }
   } @else if $col == md {
     @include md {
-      flex-direction: column;
+      @content;
     }
   } @else if $col == lg {
     @include lg {
-      flex-direction: column;
+      @content;
     }
   } @else if $col == xl {
     @include xl {
-      flex-direction: column;
-    }
-  }
-}
-
-@mixin gridToColumn($col) {
-  @if $col == xs {
-    @include xs {
-      grid-template-columns: 1fr;
-    }
-  } @else if $col == sm {
-    @include sm {
-      grid-template-columns: 1fr;
-    }
-  } @else if $col == md {
-    @include md {
-      grid-template-columns: 1fr;
-    }
-  } @else if $col == lg {
-    @include lg {
-      grid-template-columns: 1fr;
-    }
-  } @else if $col == xl {
-    @include xl {
-      grid-template-columns: 1fr;
+      @content;
     }
   }
 }
