@@ -14,7 +14,9 @@
   flex-direction: $fd;
   align-content: $ac;
 
-  @include flexToColumn($col);
+  @include responsive($col) {
+    flex-direction: column;
+  };
 }
 
 @mixin flexItem($fl: 1, $or: null, $as: null) {
