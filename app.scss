@@ -1,19 +1,43 @@
-@import "settings/breakpoints";
-@import "settings/flex";
-@import "settings/grid-layout";
-@import "settings/box-model";
+@import "mix";
 
-p {
-  @include flexItem(1 1 35px, $or: -1);
+* {
+  @include resetAll;
 }
 
-div {
-  @include flexContainer(flex-start, flex-end, $fw: wrap, $col: xs);
+p.p {
+  @include size(300px, 100px);
+  @include flexContainer(center, flex-end);
+  @include marginX(auto);
+}
+
+div.set {
+  @include flexContainer(center, flex-end, $fw: wrap, $res: xs);
   @include listMargin(13rem, null, 2, sm);
+  // @include position(absolute, $r: 0, $l: 0);
+  @include responsive(xl) {
+    // @include position($r: 30px, $l: 0, $t: 3px);
+  }
+  @include paddingX(null, $sz-5, 20px, $neg-margin: true);
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  @include gridContainer($gtc: repeat(2, 1fr), $gap: 3rem, $ac: center, $col: xl);
+  @include fullViewport;
+  @include flexContainer(center, center);
+}
+
+div.grid {
+  @include gridContainer(
+    $gtc: repeat(2, 1fr),
+    $gap: 3rem,
+    $ac: center,
+    $res: md
+  );
+}
+
+.flex {
+  @include flexContainer;
+}
+li {
+  @include flexItem;
+  @include listMargin($sz-8, null, $sz-4, lg);
 }

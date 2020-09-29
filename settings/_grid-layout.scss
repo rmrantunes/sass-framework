@@ -10,7 +10,7 @@
   $ac: null,
   $ji: null,
   $ai: null,
-  $col: null
+  $res: null
 ) {
   display: grid;
   grid-template-columns: $gtc;
@@ -25,9 +25,9 @@
   justify-items: $ji;
   align-items: $ai;
 
-  @include responsive($col) {
+  @include responsive($res) {
     grid-template-columns: 1fr;
-  };
+  }
 }
 
 @mixin gridItem($gc: null, $gr: null, $ga: null, $js: null, $as: null) {

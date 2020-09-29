@@ -30,24 +30,24 @@
   }
 }
 
-@mixin responsive($col) {
-  @if $col == xs {
+@mixin responsive($res) {
+  @if $res == xs {
     @include xs {
       @content;
     }
-  } @else if $col == sm {
+  } @else if $res == sm {
     @include sm {
       @content;
     }
-  } @else if $col == md {
+  } @else if $res == md {
     @include md {
       @content;
     }
-  } @else if $col == lg {
+  } @else if $res == lg {
     @include lg {
       @content;
     }
-  } @else if $col == xl {
+  } @else if $res == xl {
     @include xl {
       @content;
     }

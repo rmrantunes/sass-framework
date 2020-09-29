@@ -14,7 +14,7 @@ There is a HTML file just for tests.
   - \$fd (flex-direction): null,
   - \$fw (flex-wrap): null,
   - \$ac (align-content): null,
-  - \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
+  - \$res (activate column where breakpoint is set): null | xs | sm | md | lg | xl
 
 - @mixin flexItem(
 
@@ -39,7 +39,7 @@ There is a HTML file just for tests.
   - \$ac (align-content): null,
   - \$ji (justify-items): null,
   - \$ai (align-items): null,
-  - \$col (activate column where breakpoint is set): null | xs | sm | md | lg | xl
+  - \$res (activate column where breakpoint is set): null | xs | sm | md | lg | xl
     )
 
 - @mixin gridItem(
