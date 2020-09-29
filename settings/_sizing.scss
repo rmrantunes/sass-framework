@@ -1,0 +1,17 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin minSize($mw, $mh) {
+  min-width: $mw;
+  min-height: $mh;
+}
+
+@mixin fullViewport {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+
+
