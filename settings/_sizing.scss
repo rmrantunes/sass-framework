@@ -8,10 +8,17 @@
   min-height: $mh;
 }
 
+@mixin maxSize($mw: null, $mh: null) {
+  max-width: $mw;
+  max-height: $mh;
+}
+
 @mixin fullViewport {
   min-width: 100%;
   min-height: 100vh;
 }
+
+// SPACES
 
 $sz-1: 0.25rem;
 $sz-2: 0.5rem;
@@ -23,5 +30,3 @@ $sz-7: 3rem;
 $sz-8: 5rem;
 $sz-9: 8rem;
 $sz-10: 13rem;
-
-
