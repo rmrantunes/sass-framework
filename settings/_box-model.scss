@@ -1,9 +1,9 @@
 //
 // PADDING
 //
-@mixin paddingX($pd: null, $pl: null, $pr: null, $neg-margin: false) {
-  padding-left: $pd;
-  padding-right: $pd;
+@mixin paddingX($pdd: null, $pl: null, $pr: null, $neg-margin: false) {
+  padding-left: $pdd;
+  padding-right: $pdd;
 
   @if $pl != null {
     padding-left: $pl;
@@ -13,9 +13,9 @@
   }
 
   @if $neg-margin == true {
-    @if $pd != null {
-      margin-left: $pd * (-1);
-      margin-right: $pd * (-1);
+    @if $pdd != null {
+      margin-left: $pdd * (-1);
+      margin-right: $pdd * (-1);
     }
     @if $pl != null {
       margin-left: $pl * (-1);
@@ -26,9 +26,9 @@
   }
 }
 
-@mixin paddingY($pd: null, $pt: null, $pb: null, $neg-margin: false) {
-  padding-top: $pd;
-  padding-bottom: $pd;
+@mixin paddingY($pdd: null, $pt: null, $pb: null, $neg-margin: false) {
+  padding-top: $pdd;
+  padding-bottom: $pdd;
 
   @if $pt != null {
     padding-top: $pt;
@@ -37,9 +37,9 @@
     padding-bottom: $pb;
   }
   @if $neg-margin == true {
-    @if $pd != null {
-      margin-left: $pd * (-1);
-      margin-right: $pd * (-1);
+    @if $pdd != null {
+      margin-left: $pdd * (-1);
+      margin-right: $pdd * (-1);
     }
 
     @if $pt != null {
@@ -54,6 +54,56 @@
 //
 // MARGIN
 //
+
+@mixin marginX($mgn: null, $ml: null, $mr: null, $neg-padding: false) {
+  margin-left: $mgn;
+  margin-right: $mgn;
+
+  @if $ml != null {
+    margin-left: $ml;
+  }
+  @if $mr != null {
+    margin-right: $mr;
+  }
+
+  @if $neg-padding == true {
+    @if $mgn != null {
+      padding-left: $mgn * (-1);
+      padding-right: $mgn * (-1);
+    }
+    @if $ml != null {
+      padding-left: $ml * (-1);
+    }
+    @if $mr != null {
+      padding-right: $mr * (-1);
+    }
+  }
+}
+
+@mixin marginX($mgn: null, $mt: null, $mb: null, $neg-padding: false) {
+  margin-top: $mgn;
+  margin-bottom: $mgn;
+
+  @if $mt != null {
+    margin-top: $mt;
+  }
+  @if $mb != null {
+    margin-bottom: $mb;
+  }
+
+  @if $neg-padding == true {
+    @if $mgn != null {
+      padding-top: $mgn * (-1);
+      padding-bottom: $mgn * (-1);
+    }
+    @if $mt != null {
+      padding-top: $mt * (-1);
+    }
+    @if $mb != null {
+      padding-bottom: $mb * (-1);
+    }
+  }
+}
 
 @mixin listMargin($ml: null, $mt: null, $invert: null, $col: null) {
   & + & {
