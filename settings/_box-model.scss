@@ -133,3 +133,26 @@
     // }
   }
 }
+
+
+// Responsive border-radius
+// If you are not using overflow hidden on parent, you shoud try this:
+@mixin resBorderRadLefTop($size: null, $res: null) {
+  border-top-left-radius: $size;
+  border-bottom-left-radius: $size;
+
+  @include responsive($res) {
+    border-top-right-radius: $size;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@mixin resBorderRadRigBot($size: null, $res: null) {
+  border-top-right-radius: $size;
+  border-bottom-right-radius: $size;
+
+  @include responsive($res) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: $size;
+  }
+}
