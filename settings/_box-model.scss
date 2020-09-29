@@ -13,8 +13,10 @@
   }
 
   @if $neg-margin == true {
-    margin-left: $pd * (-1);
-    margin-right: $pd * (-1);
+    @if $pd != null {
+      margin-left: $pd * (-1);
+      margin-right: $pd * (-1);
+    }
     @if $pl != null {
       margin-left: $pl * (-1);
     }
@@ -35,8 +37,11 @@
     padding-bottom: $pb;
   }
   @if $neg-margin == true {
-    margin-left: $pd * (-1);
-    margin-right: $pd * (-1);
+    @if $pd != null {
+      margin-left: $pd * (-1);
+      margin-right: $pd * (-1);
+    }
+
     @if $pt != null {
       margin-left: $pt * (-1);
     }
