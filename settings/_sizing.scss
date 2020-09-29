@@ -1,9 +1,9 @@
-@mixin size($w, $h) {
+@mixin size($w: null, $h: null) {
   width: $w;
   height: $h;
 }
 
-@mixin minSize($mw, $mh) {
+@mixin minSize($mw: null, $mh: null) {
   min-width: $mw;
   min-height: $mh;
 }
@@ -13,5 +13,15 @@
   min-height: 100vh;
 }
 
+$sz-1: 0.25rem;
+$sz-2: 0.5rem;
+$sz-3: 1rem;
+$sz-4: 1.25rem;
+$sz-5: 1.5rem;
+$sz-6: 2rem;
+$sz-7: 3rem;
+$sz-8: 5rem;
+$sz-9: 8rem;
+$sz-10: 13rem;
 
 
