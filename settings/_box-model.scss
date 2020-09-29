@@ -118,7 +118,7 @@
   }
 }
 
-@mixin listMargin($ml: null, $mt: null, $mtr: null, $res: null) {
+@mixin listMargin($ml: null, $mt: null, $res: null, $mt-res: null) {
   // This won't work fine with nesting. Be careful. The best way is by setting a class and don't nesting it.
   & + & {
     margin-left: $ml;
@@ -127,13 +127,14 @@
     // @if $invert != null {
     //   // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
     @include responsive($res) {
-      margin-top: $mtr;
+      margin-top: $mt-res;
       margin-left: 0;
     }
     // }
   }
 }
 
+// BORDER
 // Responsive border-radius
 // If you are not using overflow hidden on parent, you shoud try this:
 @mixin borderLT($size: null, $res: null) {
