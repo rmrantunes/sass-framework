@@ -1,7 +1,7 @@
 //
 // PADDING
 //
-@mixin paddingX($pd: null, $pl: null, $pr: null) {
+@mixin paddingX($pd: null, $pl: null, $pr: null, $neg-margin: false) {
   padding-left: $pd;
   padding-right: $pd;
 
@@ -11,9 +11,20 @@
   @if $pr != null {
     padding-right: $pr;
   }
+
+  @if $neg-margin == true {
+    margin-left: $pd * (-1);
+    margin-right: $pd * (-1);
+    @if $pl != null {
+      margin-left: $pl * (-1);
+    }
+    @if $pr != null {
+      margin-right: $pr * (-1);
+    }
+  }
 }
 
-@mixin paddingY($pd: null, $pt: null, $pb: null) {
+@mixin paddingY($pd: null, $pt: null, $pb: null, $neg-margin: false) {
   padding-top: $pd;
   padding-bottom: $pd;
 
@@ -22,6 +33,16 @@
   }
   @if $pb != null {
     padding-bottom: $pb;
+  }
+  @if $neg-margin == true {
+    margin-left: $pd * (-1);
+    margin-right: $pd * (-1);
+    @if $pt != null {
+      margin-left: $pt * (-1);
+    }
+    @if $pb != null {
+      margin-right: $pb * (-1);
+    }
   }
 }
 
