@@ -1,4 +1,17 @@
 //
+// RESET
+//
+@mixin resetAll {
+  &,
+  &::before,
+  &::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+//
 // PADDING
 //
 @mixin paddingX($pdd: null, $pl: null, $pr: null, $neg-margin: false) {
@@ -36,12 +49,12 @@
   @if $pb != null {
     padding-bottom: $pb;
   }
+
   @if $neg-margin == true {
     @if $pdd != null {
       margin-left: $pdd * (-1);
       margin-right: $pdd * (-1);
     }
-
     @if $pt != null {
       margin-left: $pt * (-1);
     }
@@ -80,7 +93,7 @@
   }
 }
 
-@mixin marginX($mgn: null, $mt: null, $mb: null, $neg-padding: false) {
+@mixin marginY($mgn: null, $mt: null, $mb: null, $neg-padding: false) {
   margin-top: $mgn;
   margin-bottom: $mgn;
 
@@ -105,17 +118,18 @@
   }
 }
 
-@mixin listMargin($ml: null, $mt: null, $invert: null, $col: null) {
+@mixin listMargin($ml: null, $mt: null, $mtr: null, $res: null) {
+  // This won't work fine with nesting. Be careful. The best way is by setting a class and don't nesting it.
   & + & {
     margin-left: $ml;
     margin-top: $mt;
 
-    @if $invert != null {
-      // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
-      @include responsive($col) {
-        margin-top: $ml * $invert;
+    // @if $invert != null {
+    //   // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
+      @include responsive($res) {
+        margin-top: $mtr;
         margin-left: 0;
       }
-    }
+    // }
   }
 }
