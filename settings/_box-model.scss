@@ -126,18 +126,17 @@
 
     // @if $invert != null {
     //   // Invert: how many times margin-top should be bigger than margin-left on mobile devices;
-      @include responsive($res) {
-        margin-top: $mtr;
-        margin-left: 0;
-      }
+    @include responsive($res) {
+      margin-top: $mtr;
+      margin-left: 0;
+    }
     // }
   }
 }
 
-
 // Responsive border-radius
 // If you are not using overflow hidden on parent, you shoud try this:
-@mixin resBorderRadLefTop($size: null, $res: null) {
+@mixin borderLT($size: null, $res: null) {
   border-top-left-radius: $size;
   border-bottom-left-radius: $size;
 
@@ -147,7 +146,7 @@
   }
 }
 
-@mixin resBorderRadRigBot($size: null, $res: null) {
+@mixin borderRB($size: null, $res: null) {
   border-top-right-radius: $size;
   border-bottom-right-radius: $size;
 
